@@ -7,6 +7,10 @@ Suppose there is a circle. There are n petrol pumps on that circle. You are give
 Calculate the first point from where a truck will be able to complete the circle (The truck will stop at each petrol pump and it has infinite capacity). Expected time complexity is O(n). Assume for 1 litre petrol, the truck can go 1 unit of distance.
 """
 
+"""
+http://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/
+"""
+
 def find_start_point(p, d):
     # Check for if solution exist
     if sum(p) < sum(d):
