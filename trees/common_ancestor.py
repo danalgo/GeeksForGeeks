@@ -32,6 +32,24 @@ def common_ancestor(first, second, root, ancestors):
         print ancestors
     common_ancestor(first, second, root.left, ancestors + [root.data])
 
+def least_common_ancestor(root, p, q):
+    if root is None:
+        return None
+    if root.left is p or root.right is q or root.right is p or root.left is q:
+        # Root is the common ancestor
+        return root
+    else:
+        # Check it in left subtree
+        l = least_common_ancestor(root.left, p, q)
+        r = least_common_ancestor(root.right, p, q)
+        
+        if l is None and r is None:
+            return None 
+        elif l is None and r is not None:
+            return root 
+        elif l is not None and r i None:
+            return root
+
 
 if __name__=='__main__':
     root = create_tree() 
